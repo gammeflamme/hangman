@@ -5,3 +5,10 @@ C:\Users\wilhelm.sundqvistek\Downloads\HangmanRepetition\HangmanRepetition\obj\D
 C:\Users\wilhelm.sundqvistek\Downloads\HangmanRepetition\HangmanRepetition\obj\Debug\HangmanRepetition.csproj.CoreCompileInputs.cache
 C:\Users\wilhelm.sundqvistek\Downloads\HangmanRepetition\HangmanRepetition\obj\Debug\HangmanRepetition.exe
 C:\Users\wilhelm.sundqvistek\Downloads\HangmanRepetition\HangmanRepetition\obj\Debug\HangmanRepetition.pdb
+C:\FTP\programering\hangman\HangmanRepetition\bin\Debug\HangmanRepetition.exe.config
+C:\FTP\programering\hangman\HangmanRepetition\bin\Debug\HangmanRepetition.exe
+C:\FTP\programering\hangman\HangmanRepetition\bin\Debug\HangmanRepetition.pdb
+C:\FTP\programering\hangman\HangmanRepetition\obj\Debug\HangmanRepetition.csprojAssemblyReference.cache
+C:\FTP\programering\hangman\HangmanRepetition\obj\Debug\HangmanRepetition.csproj.CoreCompileInputs.cache
+C:\FTP\programering\hangman\HangmanRepetition\obj\Debug\HangmanRepetition.exe
+C:\FTP\programering\hangman\HangmanRepetition\obj\Debug\HangmanRepetition.pdb

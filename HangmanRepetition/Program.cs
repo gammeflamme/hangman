@@ -40,9 +40,8 @@ namespace HangmanRepetition
             // SPELET
             while (!IsComplete(visibleWord) && erroneousGuesses.Count < maxErroneousGuesses)
             {
-                DrawHangedMan(erroneousGuesses.Count);
-                PrettyPrint(visibleWord);
-
+                Console.WriteLine(DrawHangedMan(erroneousGuesses.Count));
+                Console.WriteLine(PrettyPrint(visibleWord));
                 string guess = GetGuess();
 
                 if (IsIn(guess, word))
@@ -117,15 +116,15 @@ namespace HangmanRepetition
         static bool IsComplete(string[] visibleWord)
         {
 
-            bool check = false;
+            bool check = true;
             // Returnera true ifall alla _ har bytts ut mot tecken, annars false
             for (int i = 0; i < visibleWord.Length; i++)
             {
                 
-                if (visibleWord[i] != "_")
+                if (visibleWord[i] == "_")
                 {
-                    check = true;
-                    i = visibleWord.Length;
+                    check = false;
+                    
                 }
 
             }
@@ -137,7 +136,7 @@ namespace HangmanRepetition
         static string GetGuess()
         {
             // Returnera en 1 bokstavs gissning. Returnera alltid en liten bokstav (a istället för A t.ex.)
-            string letter = Console.ReadKey().KeyChar.ToString();
+            string letter = Console.ReadLine().ToCharArray()[0].ToString();
             return letter;
         }
 
@@ -145,14 +144,14 @@ namespace HangmanRepetition
         {
             // Returnera true om s finns i word, annars false.
             bool check = false;
-            string[] wordarr = word.Split();
+            char[] wordarr = word.ToCharArray();
             for (int i = 0; i < word.Length; i++)
             {
 
-                if (wordarr[i] != s)
+                if (wordarr[i].ToString() == s)
                 {
                     check = true;
-                    i = word.Length;
+                    
                 }
 
             }
@@ -168,14 +167,14 @@ namespace HangmanRepetition
             // s finns i word bytts ut mot s.
             // T.ex. om s är "m", word är ["m", "a", "m", "m", "a"] och visibleWord är
             // ["_", "_", "_", "_", "_"] så ska metoden returnera ["m", "_", "m", "m", "_"]
-            string[] wordarr = word.Split();
+            char[] wordarr = word.ToCharArray();
 
 
             for (int i = 0; i < word.Length; i++)
             {
-                if (visibleWord[i] == s)
+                if (wordarr[i].ToString() == s)
                 {
-                    visibleWord[i] = wordarr[i];
+                    visibleWord[i] = wordarr[i].ToString();
                 }
 
 
@@ -198,11 +197,15 @@ namespace HangmanRepetition
         static void DisplayWin()
         {
             // Visa någon form av vinst-meddelande
+            Console.WriteLine("u vin");
+            Console.ReadKey();
         }
 
         static void DisplayLoss()
         {
             // Visa någon form av förlust-meddelande
+            Console.WriteLine("u nose");
+            Console.ReadKey();
         }
 
     }
